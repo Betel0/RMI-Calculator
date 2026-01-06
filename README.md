@@ -18,6 +18,8 @@ This project allows multiple clients to connect to a remote calculator server an
 
 ## 🗂️ Project Structure
 
+```bat
+
 RMI-Calculator/
 ├─ src/
 │ ├─ client/
@@ -32,6 +34,8 @@ RMI-Calculator/
 ├─ README.md # Project documentation
 ├─ .env # Environment variables (optional)
 └─ screenshots/ # Optional GUI screenshots
+
+```
 
 ---
 
@@ -56,4 +60,3 @@ RMI-Calculator/
 
 1. **Set the port in `.env`** (optional):
    ```env
-   PORT=5004
