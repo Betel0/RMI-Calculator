@@ -1,0 +1,25 @@
+// RMI Client Security Policy
+// Grants all permissions to the calculator client
+
+grant {
+    // Allow all permissions for RMI operations
+    permission java.security.AllPermission;
+
+    // Socket permissions for RMI communication
+    permission java.net.SocketPermission "*:1024-65535", "connect,accept,resolve";
+    permission java.net.SocketPermission "*:1099", "connect,accept,resolve,listen";
+
+    // File permissions
+    permission java.io.FilePermission "<<ALL FILES>>", "read,write";
+
+    // Runtime permissions
+    permission java.lang.RuntimePermission "*";
+    permission java.util.PropertyPermission "*", "read,write";
+
+    // Reflect permissions
+    permission java.lang.reflect.ReflectPermission "suppressAccessChecks";
+
+    // Serialization permissions
+    permission java.io.SerializablePermission "enableSubstitution";
+    permission java.io.SerializablePermission "enableSubclassImplementation";
+};
